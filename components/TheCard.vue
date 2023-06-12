@@ -13,12 +13,12 @@
                         :class="{ flipped: isFlipped }"
                         color="bg200"
                         max-width="90%"
-                        height="45vh"
+                        height="35vh"
                         prepend-icon="mdi-eye-outline"
-                        :title="isFlipped ? 'Mithiin ng Pamantasan' : 'Vision'"
+                        :title="isFlipped ? 'niiʜɈiM' : 'Vision'"
                         @click="toggleFlip"
                     >
-                        <v-card-text class="text-h6">
+                        <v-card-text class="text-h5 auto-fit-text">
                             <template v-if="!isFlipped">
                                 The premier university in historic Cavite
                                 recognized for excellence in the development of
@@ -80,7 +80,6 @@ onMounted(() => {
     position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    cursor: pointer;
     width: 90%;
     height: 60vh;
 }
@@ -94,7 +93,7 @@ onMounted(() => {
     pointer-events: auto;
 }
 
-.v-card-title {
+.v-card .title {
     writing-mode: horizontal-tb;
 }
 
@@ -102,5 +101,24 @@ onMounted(() => {
     transform: rotateY(180deg);
     height: 100%;
     text-align: end;
+    letter-spacing: 0.0131rem;
+}
+
+@media (max-width: 960px) {
+    .auto-fit-text {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 961px) {
+    .auto-fit-text {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .auto-fit-text {
+        font-size: 20px;
+    }
 }
 </style>

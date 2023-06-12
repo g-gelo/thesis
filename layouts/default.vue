@@ -1,5 +1,6 @@
 <template>
     <v-app dark>
+        <VitePwaManifest />
         <v-app-bar fixed app color="primary100">
             <v-img
                 src="/img/GuidanceConnect.png"
